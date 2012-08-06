@@ -1,0 +1,40 @@
+% UserManual.tex
+
+% This is the initial draft of the User Manual for the decision
+% support tools being developed by J. Michael Dean and Kathy Sward.
+%
+% This draft concentrates on mechanical ventilation, but parts
+% of this manual will be adaptable to other areas of support.
+
+% August 4, 2012
+%
+% J. Michael Dean, M.D., M.B.A.
+% Copyright 2012.  University of Utah School of Medicine.  
+% All Rights Reserved.
+
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt,twoside]{article}
+%%%% Now include the standard data center command file, which will
+%            take care of all the package requirements and special commands.
+\usepackage{dataCenterSetup}
+\include{configuration}
+\usepackage{microtype}
+\usepackage[letterpaper, width=6.25in, left=1.25in]{geometry}
+
+\begin{document}
+
+\pagestyle{empty}
+\include{titlepage}
+\pagestyle{protocol}  
+\newpage
+\ THIS PAGE IS INTENTIONALLY BLANK.\\
+\newpage
+
+\tableofcontents
+%\listoftables
+\listoffigures
+
+\include{lambUserManualText}
+
+
+\end{document}

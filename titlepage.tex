@@ -1,0 +1,122 @@
+% This document contains the code for protocol title page.  It should not be altered
+%  because it is configured from other files.
+
+%  				J. Michael Dean, M.D.
+%  				University of Utah School of Medicine
+
+% The following line makes this document point back so that my software will synchronize
+% between the preview and source windows.  
+
+%!TEX root = UserManual.tex
+
+%%%%%  DO NOT ALTER CODE BELOW THIS POINT %%%%%%%%%%%%%%%%%%%%
+
+\newlength{\centeroffset}
+\setlength{\centeroffset}{-0.5\oddsidemargin}
+\addtolength{\centeroffset}{0.5\evensidemargin}
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+\noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
+\flushright
+\textcolor{red}
+{\Large\bfseries \projectlongname ~\\ 
+%(\projectshortname~)~\\
+%\abb~  %Protocol Number \protocolnumber~ \\
+}
+
+\noindent\rule[-1ex]{\textwidth}{5pt}\\[2.5ex]
+\hfill 
+\Large \network~\\
+\longfunder~ \\
+
+\ \\
+
+Julie Beckstrom, M.S.\\
+J. Michael Dean, M.D.\\
+Katherine Sward, Ph.D.\\
+
+
+\end{minipage}}
+\vspace{\stretch{1}}
+
+\noindent\hspace*{\centeroffset}\makebox[0pt][l]{\begin{minipage}{\textwidth}
+
+\flushright
+
+Program Version~\protocolversion ~\\
+Version Date: \versiondate ~\\
+Printing Date: \today
+\end{minipage}}
+\vspace{\stretch{2}}
+
+\pagebreak
+%\begin{small} 
+Copyright \copyright{} 2012. University of Utah School of Medicine on
+behalf of the \network~ (\abb~).
+All rights reserved. \\
+
+This user manual describes computer decision support software that is being 
+developed in support of \abb~ research protocols, and the 
+lead \abb~ investigators for this research effort
+are \leadPI~, ~\leadinstitution~. The preclinical version of software
+is being deployed in the Lamb Intensive Care Unit (LICU) in the laboratory of
+Kurt Albertine, Ph.D., at the University of Utah, in support of NHLBI
+funded studies on neonatal respiratory failure.\\
+
+
+
+
+\ifthenelse{\boolean{CPCCRN}}
+{
+The CPCCRN Clinical Centers are
+ the Children's Hospital of Los Angeles, Children's Hospital of Michigan, Children's Hospital of Philadelphia, Children's Hospital of Pittsburgh, Children's National Medical Center, Phoenix Children's Hospital, and the University of Michigan, and are supported by Cooperative Agreements U10-HD050012, U10-HD050096, U10-HD063108, U10-HD049983, U10-HD049981, U10-HD063114, and U10-HD063106, respectively, from the \emph{Eunice Kennedy Shriver} \funder~. \\
+
+ This document was prepared by the CPCCRN Data Coordinating Center located at
+ the University of Utah School of Medicine, Salt Lake City, Utah.  The CPCCRN Data Coordinating Center at the University of Utah
+ is supported by Cooperative Agreement U01-HD049934 from the
+ \funder~.
+ The document was
+ written and typeset using \LaTeXe.
+
+}{}
+
+\ifthenelse{\boolean{PECARN}}
+{
+The PECARN Research Node Centers are
+the University of California at Davis,  Children's National
+Medical Center, University of Michigan at Ann Arbor, Columbia University,
+and Children's Hospital of Michigan, and
+are supported by Cooperative Agreements U03-MC00001, U03-MC00003,
+U03-MC00006, and U03-MC00007,
+from the Emergency Medical Services for Children (EMSC) Program, Maternal
+and Child Health Bureau, Health Resources and Services Administration. \\
+
+ This document was prepared by the PECARN Central  Data Management
+ and Coordinating Center
+ (CDMCC) located at
+ the University of Utah School of Medicine, Salt Lake City, Utah.  The document was
+ written and typeset using \LaTeXe.
+ The CDMCC at the University of Utah
+ is supported by Cooperative Agreement U03-MC00008   from the
+ Emergency Medical Services for Children (EMSC) Program, Maternal
+  and Child Health Bureau, Health Resources and Services Administration.
+  }{}
+  
+\ifthenelse{\boolean{HCRN}}
+{
+%%% COULD INSERT PARAGRAPH DESCRIBING NETWORK SITES
+
+ This document was prepared by the PECARN Central  Data Management
+ and Coordinating Center
+ (CDMCC) located at
+ the University of Utah School of Medicine, Salt Lake City, Utah.  The document was
+ written and typeset using \LaTeXe.
+ The CDMCC at the University of Utah
+ is supported by Cooperative Agreement U03-MC00008   from the
+ Emergency Medical Services for Children (EMSC) Program, Maternal
+  and Child Health Bureau, Health Resources and Services Administration.
+  }{}
+  
+%\end{small}
+
+\endinput

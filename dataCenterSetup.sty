@@ -1,0 +1,80 @@
+% dataCenterSetup.sty
+%
+% This style file is a command file that contains all
+% the normal inclusion requirements for standalone
+% study protocols as well as Manuals of Operation.
+%
+% The file also contains commands that are used
+% in protocols and Manuals of Operations but are
+% not specific to a given study.
+
+\ProvidesPackage{dataCenterSetup}[2008/08/15 v1.0  
+		Commands and setup for Utah DCC documents.]
+		
+
+\RequirePackage{ifthen}                     %  Allows use of if then else commands throughout document
+\RequirePackage{makeidx}                    %  Allows creation of an index
+\RequirePackage{moreverb}                   %  Enables more sophisticated verbatim inclusion
+\RequirePackage{relsize}
+\RequirePackage{lscape}                 %  Allows us to use landscape mode when we like
+\RequirePackage{longtable}                  %  Allows tables to cross pages automatically
+\RequirePackage{url}                        %  Enables proper punctuation of URLs
+\RequirePackage{multicol}                   %  Permits multi-column formatting
+\RequirePackage{varioref}                   %  Sets up smart references
+\RequirePackage{paralist}
+%\RequirePackage{minitoc}                    %  Table of contents at beginning of each chapter
+\RequirePackage[sectionbib]{chapterbib}     %  Permits separate bibliography in each chapter
+\RequirePackage[super,sort,compress]{cite}      %  Format of the citations
+\RequirePackage{fancyhdr, lastpage}
+\RequirePackage{color}
+\RequirePackage{xcolor}
+\RequirePackage{pdfcolmk}
+\RequirePackage{xspace}
+\RequirePackage{array}
+
+\newboolean{CPCCRN}
+\newboolean{PECARN}
+\newboolean{HCRN}
+\newboolean{STUDY}
+\newboolean{MANUAL}
+\newboolean{SAE}
+\newboolean{SITEMONITOR}
+\newboolean{FDACHAPTER}
+\newboolean{DSMB}
+\newboolean{LAB}
+\newboolean{SCENARIOS}
+\newboolean{PATIENTFILE}
+\newboolean{PUBLICATIONS}
+\newboolean{DIRECTORY}
+\newboolean{ROSTER}
+\newboolean{PRINTED}
+
+\newcommand{\dean}[1]{J Michael Dean, MD, MBA\xspace}
+\newcommand{\zuspan}[1]{Sally Jo Zuspan, RN, MSN\xspace}
+\newcommand{\call}[1]{Kym Call, BA, CCRP\xspace}
+\newcommand{\gramse}[1]{Heather Gramse, BS\xspace}
+\newcommand{\lafleur}[1]{Bonnie LaFleur, PhD, MPH\xspace}
+\newcommand{\jarvi}[1]{Albert Jarvi\xspace}
+\newcommand{\rene}[1]{Rene Enriquez, BS\xspace}
+\newcommand{\prashant}[1]{Prashant Mahajan, MD\xspace}
+\newcommand{\duffy}[1]{Elizabeth Duffy, MPH\xspace}
+\newcommand{\burr}[1]{Jeri Burr, BS, RN-BC, CCRC\xspace}
+\newcommand{\nilson}[1]{David Nilson, BS, CCRC\xspace}
+\newcommand{\singh}[1]{Devinder Singh, BS\xspace}
+\newcommand{\amy}[1]{Amy, Donaldson, MS\xspace}
+\newcommand{\rich}[1]{Rich Holubkov, PhD\xspace}
+\newcommand{\anna}[1]{Anna Davis, RN, MPH\xspace}
+\newcommand{\brynna}[1]{Brynna Morrison, BS\xspace}
+\newcommand{\ruth}[1]{Ruth Barker\xspace}
+
+%\newcommand{\eroom}{eRoom$^{\small{TM}}$\xspace}
+\newcommand{\eroom}{eRoom$^{TM}$\xspace}
+\newcommand{\degrees}{$^{\circ}\mathrm{C}$\xspace}
+\newcommand{\degree}{\degrees}
+\newcommand{\greaterequal}{$\geq$\xspace}
+\newcommand{\lessequal}{$\leq$\xspace}
+
+\setlength{\headheight}{15pt}
+\pdfoptionpdfminorversion=6
+
+\endinput

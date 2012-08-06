@@ -1,0 +1,72 @@
+% This document contains configuration parameters for protocols and manuals.
+
+%               J. Michael Dean, M.D.
+%               University of Utah School of Medicine
+%               Revised August 15, 2008
+%
+% The following line makes this document point back so that my software will synchronize
+% between the preview and source windows on Macintosh.  The command has no effect in Windows.
+
+
+%% Project specific information
+\newcommand{\leadPI}[1]{J. Michael Dean, M.D. and Katherine Sward, Ph.D.}
+\newcommand{\lastnamePI}[1]{Dean and Sward}
+\newcommand{\leadinstitution}[1]{University of Utah School of Medicine and College of Nursing}
+\newcommand{\projectlongname}[1]{Pediatric Mechanical Ventilation Decision Support User Manual (Lamb Version)}
+\newcommand{\projectshortname}[1]{Ventilator Decision Support}    % ---> Shorter than 15 characters
+\newcommand{\protocolnumber}[1]{}
+
+%% Versioning information
+%% MOO version should be protocol version followed by decimal and MOO version
+\newcommand{\protocolversion}[1]{0.01}
+\newcommand{\versiondate}[1]{\today}
+\newcommand{\mooversion}[1]{0.01.01}
+\newcommand{\mooversiondate}[1]{\today}
+%\newcommand{\versiondate}[1]{\today}
+
+%% Set the correct network ---> ONLY ONE OF THESE MAY BE TRUE!
+\setboolean{CPCCRN}{true}
+% print version or electronic?
+\setboolean{PRINTED}{false}
+
+%%%%%%%%%%%%  DO NOT EDIT BELOW THIS LINE %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\network}[1]{Collaborative Pediatric Critical Care Research Network}
+\newcommand{\netfooter}[1]{The NICHD Collaborative Pediatric Critical Care Research Network}
+\newcommand{\abb}[1]{CPCCRN}
+\newcommand{\funder}[1]{National Institute for Child Health and Human Development (NICHD)}
+\newcommand{\longfunder}[1]{\emph{Eunice Kennedy Shriver} \funder}
+\newcommand{\shortfunder}[1]{NICHD}
+\newcommand{\dcc}[1]{DCC}
+\newcommand{\site}[1]{Clinical Center}
+\newcommand{\faxserver}[1]{801-587-8315}
+
+
+
+
+\fancypagestyle{protocol}{\fancyhf{}%
+    \fancyhead[RO,LE] {Page \thepage ~of \pageref{LastPage}}%
+    \fancyhead[RE,LO] {Ventilation CDS User Manual  \~ (\lastnamePI~)}%
+   \fancyfoot[C]{\scriptsize \projectshortname. User Manual Version \mooversion ~\\
+   Manual Version Date: \mooversiondate ~\\
+    \netfooter}
+    \renewcommand \headrulewidth{.4pt}
+    \renewcommand \footrulewidth{.4pt}}
+	
+
+\ifthenelse{\boolean{PRINTED}}
+{
+\usepackage[pdftex]{graphicx}
+\usepackage{pdfpages}
+}{
+\usepackage[pdftex,colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue,
+urlcolor=blue,plainpages=false]{graphicx,hyperref}
+\usepackage{pdfpages}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+}
+	
+\usepackage{minitoc}
+
+\endinput
